@@ -1,0 +1,17 @@
+﻿@using OnlineShop.Data.Repository
+
+@inject IGroupRepository _GroupRepositoru;
+
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-bs-toggle="dropdown" aria-expanded="false">گروه ها</a>
+    <ul class="dropdown-menu" aria-labelledby="dropdown04">
+@foreach(var item in _GroupRepositoru.GetAllCategories())
+{
+            <li><a class="dropdown-item" href="/Group/@item.Id/@item.Name">@item.Name</a></li>
+    
+            
+            
+        
+}
+    </div>
+</li>
